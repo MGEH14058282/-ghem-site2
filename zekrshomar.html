@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.H.E.M | ذکرشمار</title>
+    <style>
+        body { font-family: sans-serif; background: #064e3b; color: white; text-align: center; margin: 0; display: flex; flex-direction: column; justify-content: center; height: 100vh; overflow: hidden; }
+        #num { font-size: 120px; font-weight: bold; margin: 10px 0; font-variant-numeric: tabular-nums; }
+        .tap-area { width: 250px; height: 250px; background: #f97316; border-radius: 50%; border: 10px solid rgba(255,255,255,0.2); margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 40px; font-weight: bold; cursor: pointer; user-select: none; transition: 0.1s; box-shadow: 0 15px 30px rgba(0,0,0,0.4); }
+        .tap-area:active { transform: scale(0.92); background: #c2410c; }
+        .btn-group { margin-top: 50px; }
+        .btn { background: rgba(255,255,255,0.1); border: 1px solid white; color: white; padding: 10px 20px; border-radius: 10px; margin: 5px; cursor: pointer; }
+        .home { position: absolute; top: 20px; right: 20px; text-decoration: none; color: #5eead4; border: 1px solid #5eead4; padding: 5px 15px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="home">خانه</a>
+    <p>ذکرشمار هوشمند G.H.E.M</p>
+    <div id="num">0</div>
+    <div class="tap-area" onclick="inc()">بزن!</div>
+    
+    <div class="btn-group">
+        <button class="btn" onclick="res()">ریست (0)</button>
+        <button class="btn" onclick="dec()">کاهش (-1)</button>
+    </div>
+
+    <script>
+        let n = 0;
+        function inc() { n++; up(); if(window.navigator.vibrate) window.navigator.vibrate(50); }
+        function dec() { if(n > 0) n--; up(); }
+        function res() { if(confirm('صفر شود؟')) { n = 0; up(); } }
+        function up() { document.getElementById('num').innerText = n; }
+    </script>
+</body>
+</html>

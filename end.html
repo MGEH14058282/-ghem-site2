@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>پایان | G.H.E.M</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --teal:#0f766e;
+      --orange:#f97316;
+      --bg:#0b1220;
+      --card:#0f172a;
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+      --border: rgba(255,255,255,.08);
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+      --radius: 20px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:"Vazirmatn", system-ui, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(15,118,110,.35), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(249,115,22,.25), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.65);
+      border-bottom:1px solid var(--border);
+    }
+
+    .wrap{
+      max-width:980px;
+      margin:0 auto;
+      padding:14px;
+    }
+
+    .top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo{
+      width:40px;
+      height:40px;
+      border-radius:12px;
+      background: linear-gradient(135deg, var(--teal), var(--orange));
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    h1{
+      margin:0;
+      font-size:18px;
+    }
+
+    .sub{
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .nav{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+
+    .nav a{
+      text-decoration:none;
+      color:var(--text);
+      padding:8px 12px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background: rgba(255,255,255,.03);
+      transition:.2s ease;
+      font-size:13px;
+    }
+
+    .nav a:hover{
+      transform: translateY(-1px);
+      border-color: rgba(249,115,22,.35);
+    }
+
+    .nav a.active{
+      border-color: rgba(15,118,110,.55);
+      box-shadow: 0 0 0 3px rgba(15,118,110,.18);
+    }
+
+    main{
+      flex:1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px 14px 40px;
+    }
+
+    .card{
+      width:min(900px, 100%);
+      background: rgba(15,23,42,.75);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align:center;
+      padding:34px 22px;
+    }
+
+    .dua{
+      font-family:"Amiri","Vazirmatn",serif;
+      font-size:42px;
+      line-height:2;
+      margin:0 0 20px;
+      color:#ffffff;
+    }
+
+    .message{
+      font-size:18px;
+      color:var(--muted);
+      margin-bottom:26px;
+    }
+
+    .maker{
+      font-size:20px;
+      font-weight:800;
+      color:#22c55e;
+      background: rgba(34,197,94,.08);
+      border:1px solid rgba(34,197,94,.25);
+      display:inline-block;
+      padding:12px 18px;
+      border-radius:14px;
+      box-shadow: 0 0 0 3px rgba(34,197,94,.08);
+    }
+
+    .footerNote{
+      margin-top:22px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    @media (max-width:600px){
+      .dua{
+        font-size:32px;
+      }
+      .maker{
+        font-size:16px;
+        line-height:1.8;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>G.H.E.M</h1>
+          <div class="sub">صفحه پایانی</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">صفحه اصلی</a>
+        <a href="azkar.html">اذکار</a>
+        <a href="zekrshomar.html">ذکرشمار</a>
+        <a href="faraj.html">دعای فرج</a>
+        <a href="end.html" class="active">پایان</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="card">
+    <h2 class="dua">التماس دعا</h2>
+    <p class="message">از همراهی شما در این سایت معنوی بسیار سپاسگزاریم 🤍</p>
+    <div class="maker">ساخته شده توسط Mohammad Mehdi Abdollahzadeh</div>
+    <div class="footerNote">G.H.E.M — پایان سایت</div>
+  </section>
+</main>
+
+</body>
+</html>

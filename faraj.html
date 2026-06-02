@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>دعای فرج | G.H.E.M</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --teal:#0f766e;
+      --orange:#f97316;
+      --bg:#0b1220;
+      --card:#0f172a;
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+      --border: rgba(255,255,255,.08);
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Vazirmatn", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(15,118,110,.35), transparent 55%),
+                  radial-gradient(900px 500px at 90% 0%, rgba(249,115,22,.25), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.9;
+    }
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.65);
+      border-bottom: 1px solid var(--border);
+    }
+    .wrap{max-width: 980px; margin: 0 auto; padding: 14px 14px;}
+    .top{
+      display:flex; gap:12px; align-items:center; justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+    }
+    .logo{
+      width:40px; height:40px; border-radius:12px;
+      background: linear-gradient(135deg, var(--teal), var(--orange));
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    h1{font-size: 18px; margin:0}
+    .nav{
+      display:flex; gap:8px; flex-wrap:wrap;
+    }
+    .nav a{
+      text-decoration:none;
+      color:var(--text);
+      padding:8px 12px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background: rgba(255,255,255,.03);
+      transition: .2s ease;
+      font-size: 13px;
+    }
+    .nav a:hover{transform: translateY(-1px); border-color: rgba(249,115,22,.35)}
+    .nav a.active{
+      border-color: rgba(15,118,110,.55);
+      box-shadow: 0 0 0 3px rgba(15,118,110,.18);
+    }
+
+    main{padding: 18px 14px 44px}
+    .card{
+      max-width: 980px;
+      margin: 0 auto;
+      background: rgba(15,23,42,.72);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card .head{
+      padding: 18px 18px 10px;
+      border-bottom:1px solid var(--border);
+      background: linear-gradient(180deg, rgba(15,118,110,.16), transparent);
+    }
+    .title{
+      display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap;
+    }
+    .title h2{margin:0; font-size: 18px}
+    .badge{
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px dashed rgba(148,163,184,.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    .card .body{padding: 18px}
+    .arabic{
+      font-family: "Amiri", "Vazirmatn", serif;
+      font-size: 22px;
+      line-height: 2.2;
+      text-align: center;
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+    }
+    .fa{
+      margin-top: 14px;
+      color: var(--text);
+      background: rgba(255,255,255,.02);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+      font-size: 15px;
+    }
+    .hint{
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    footer{
+      max-width:980px; margin: 14px auto 0;
+      padding: 0 14px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align:center;
+    }
+    .btnRow{
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:center;
+      margin-top: 14px;
+    }
+    button{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: .2s ease;
+    }
+    button:hover{transform: translateY(-1px); border-color: rgba(249,115,22,.35)}
+    @media (max-width: 480px){
+      .arabic{font-size: 20px}
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>G.H.E.M</h1>
+          <div style="color:var(--muted);font-size:12px">دعای فرج</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="ناوبری">
+        <a href="index.html">صفحه اصلی</a>
+        <a href="azkar.html">اذکار</a>
+        <a href="zekrshomar.html">ذکرشمار</a>
+        <a class="active" href="faraj.html">دعای فرج</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="card">
+    <div class="head">
+      <div class="title">
+        <h2>دعای فرج (اللهم کن لولیک…)</h2>
+        <span class="badge">برای خواندن با فونت Amiri + چینش مناسب موبایل</span>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="arabic" id="dua" lang="ar" dir="rtl">
+        اَللّهُمَّ كُنْ لِوَلِيِّكَ الحُجَّةِ بْنِ الحَسَنِ صَلَوَاتُكَ عَلَيْهِ وَعَلَى آبَائِهِ
+        فِي هذِهِ السّاعَةِ وَفِي كُلِّ ساعَةٍ
+        وَلِيّاً وَحافِظاً
+        وَقائِداً وَناصِراً
+        وَدَلِيلاً وَعَيْناً
+        حَتّى تُسْكِنَهُ أَرْضَكَ طَوْعاً
+        وَتُمَتِّعَهُ فِيها طَوِيلاً.
+      </div>
+
+      <div class="fa">
+        <strong>ترجمه‌ی پیشنهادی (برای فهم بهتر):</strong><br>
+        خدایا! برای ولیّ‌ات حجّت بن الحسن (عج)، در این ساعت و در هر ساعت، سرپرست و نگهبان و رهبر و یاور و راهنما و دیده‌بان باش،
+        تا او را با رغبت در زمینت ساکن گردانی و مدّت طولانی در آن بهره‌مندش سازی.
+      </div>
+
+      <div class="btnRow">
+        <button type="button" id="copyBtn">کپی متن دعا</button>
+        <button type="button" id="biggerBtn">بزرگ‌تر</button>
+        <button type="button" id="smallerBtn">کوچک‌تر</button>
+      </div>
+
+      <div class="hint">
+        نکته: اگر دکمه «کپی» کار نکرد، یعنی مرورگرت اجازه‌ی Clipboard نداده؛ مشکلی نیست، دستی هم می‌تونی انتخاب کنی.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    G.H.E.M — صفحه «دعای فرج»
+  </footer>
+</main>
+
+<script>
+  const duaEl = document.getElementById('dua');
+  const copyBtn = document.getElementById('copyBtn');
+  const biggerBtn = document.getElementById('biggerBtn');
+  const smallerBtn = document.getElementById('smallerBtn');
+
+  copyBtn.addEventListener('click', async () => {
+    const text = duaEl.innerText.replace(/\s+/g, ' ').trim();
+    try{
+      await navigator.clipboard.writeText(text);
+      copyBtn.textContent = 'کپی شد ✅';
+      setTimeout(()=> copyBtn.textContent = 'کپی متن دعا', 1200);
+    }catch(e){
+      copyBtn.textContent = 'اجازه کپی داده نشد';
+      setTimeout(()=> copyBtn.textContent = 'کپی متن دعا', 1500);
+    }
+  });
+
+  function getSize(){
+    return parseFloat(getComputedStyle(duaEl).fontSize);
+  }
+  biggerBtn.addEventListener('click', ()=>{
+    duaEl.style.fontSize = Math.min(getSize() + 2, 34) + 'px';
+  });
+  smallerBtn.addEventListener('click', ()=>{
+    duaEl.style.fontSize = Math.max(getSize() - 2, 16) + 'px';
+  });
+</script>
+</body>
+</html>
