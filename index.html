@@ -1,169 +1,403 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>G.H.E.M | قرآن کریم</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated Title for SEO -->
+    <title>G.H.E.M | سایت مذهبی: قرآن، چهار قل، آیت الکرسی</title>
+    <!-- Updated Meta Description for SEO -->
+    <meta name="description" content="به سایت مذهبی G.H.E.M خوش آمدید! دسترسی آسان به قرآن کریم، قرائت و متن چهار قل، و فضیلت‌های آیت الکرسی. مرجعی برای علاقه‌مندان به معارف اسلامی.">
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="GHEM, سایت مذهبی, قرآن, چهار قل, آیت الکرسی, ادعیه, مطالب اسلامی">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes zoomInFloat {
+            0% { opacity: 0; transform: scale(0.7) translateY(20px); }
+            50% { opacity: 1; transform: scale(1.1) translateY(-10px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        @keyframes floatMoon {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        @keyframes sparkle {
+            0% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0; transform: scale(0.5); }
+        }
+        @keyframes floatDove {
+            0% { transform: translateY(0px) rotate(-10deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
+            100% { transform: translateY(0px) rotate(-10deg); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(76, 175, 80, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+        }
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Vazirmatn:wght@400;700&display=swap');
+        /* General Body Styling */
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: linear-gradient(135deg, #e0f2fe, #ffffff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            text-align: center;
+            overflow-x: hidden;
+        }
 
-:root { --main:#065f46; --accent:#ea580c; --bg:#f8fafc; }
+        /* Top Bar for Date and Time - Enhanced */
+        .top-bar {
+            background-color: #e6e6fa; /* Light Lavender */
+            color: #6a5acd; /* Slate Blue */
+            padding: 8px 15px; /* Reduced padding */
+            font-size: 0.9em; /* Smaller font size */
+            border-bottom: 2px solid #dda0dd; /* Plum border */
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInDown 1s ease-out forwards;
+        }
 
-body{
-font-family:'Vazirmatn',sans-serif;
-background:var(--bg);
-color:#1e293b;
-margin:0;
-padding:20px;
-line-height:2;
-}
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
 
-.container{
-max-width:700px;
-margin:0 auto;
-}
+        /* Header Styling */
+        .header {
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            color: white;
+            padding: 25px 15px;
+            border-radius: 12px 12px 0 0;
+            font-size: 2.8em;
+            font-family: 'Amiri', serif;
+            animation: fadeInDown 1.5s ease-out forwards;
+            margin-bottom: 35px;
+            box-shadow: 0 7px 20px rgba(0, 100, 0, 0.4);
+        }
 
-.header{
-background:var(--main);
-color:white;
-padding:30px;
-border-radius:25px;
-margin-bottom:20px;
-text-align:center;
-box-shadow:0 10px 20px rgba(6,95,70,0.2);
-}
+        /* General Card Styling */
+        .card, .aya-card, .aya-card-special, .faraj-card {
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 7px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        .card:hover, .aya-card:hover, .aya-card-special:hover, .faraj-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+        }
 
-.card{
-background:white;
-padding:25px;
-border-radius:20px;
-margin-bottom:25px;
-border-right:8px solid var(--accent);
-box-shadow:0 4px 15px rgba(0,0,0,0.05);
-}
+        /* Specific Card Styles */
+        .aya-card { /* Ayat Al-Kursi and Four Quls */
+            background-color: #e3f2fd;
+            border-left-color: #64b5f6;
+        }
+        .aya-card h2 {
+            color: #1976d2;
+        }
+        .aya-card .icon {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 2.5em;
+            opacity: 0.7;
+            color: #90caf9;
+        }
+        .aya-card .moon-icon {
+            animation: floatMoon 3s ease-in-out infinite;
+        }
 
-h2{
-color:var(--main);
-font-size:1.4rem;
-border-bottom:1px solid #eee;
-padding-bottom:10px;
-margin-top:0;
-}
+        .aya-card-special { /* Wa In Ya Kaad */
+            background-color: #fff9c4;
+            border-left-color: #fbc02d;
+        }
+        .aya-card-special h2 {
+            color: #f57f17;
+        }
+        .aya-card-special .icon {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 2.5em;
+            opacity: 0.7;
+            color: #ffeb3b;
+        }
+        .aya-card-special .sparkle-icon {
+            animation: sparkle 2s ease-in-out infinite;
+        }
 
-.quran{
-font-family:'Amiri',serif;
-font-size:1.4rem;
-text-align:center;
-color:#334155;
-line-height:2.5;
-}
+        .faraj-card { /* Dua Al-Faraj */
+            background: linear-gradient(135deg, #ffffff, #e0f2fe);
+            border-left-color: #4caf50;
+        }
+        .faraj-card h2 {
+            color: #2e7d32;
+            font-size: 2.6em;
+        }
+        .faraj-card .icon {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 2.5em;
+            opacity: 0.7;
+            color: #81c784;
+        }
+        .faraj-card .dove-icon {
+            animation: floatDove 3s ease-in-out infinite;
+        }
 
-.nav-btn{
-display:block;
-background:var(--main);
-color:white;
-text-align:center;
-padding:18px;
-text-decoration:none;
-border-radius:15px;
-font-weight:bold;
-margin-bottom:15px;
-transition:0.3s;
-}
+        /* Quranic Text Styling */
+        h2 {
+            font-family: 'Amiri', serif;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #e0e0e0;
+        }
+        .quran, .faraj-text {
+            font-family: 'Amiri', serif;
+            font-size: 1.9em;
+            line-height: 2.8;
+            color: #1b5e20;
+            margin-top: 15px;
+        }
 
-.nav-btn:hover{
-background:#044e3a;
-transform:scale(1.02);
-}
+        /* Enhanced Bismillah Box */
+        .bismillah-box {
+            background: linear-gradient(135deg, #66bb6a, #388e3c);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            margin: 40px auto;
+            display: inline-block;
+            position: relative;
+            border: 5px solid #2e7d32;
+            box-shadow: 0 12px 30px rgba(0, 100, 0, 0.6);
+            animation: zoomInFloat 1.5s ease-out forwards;
+            font-size: 3.2em;
+            font-family: 'Amiri', serif;
+            letter-spacing: 5px;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+            border-image: linear-gradient(45deg, #81c784, #388e3c) 1;
+            animation: pulse 2s infinite ease-in-out;
+        }
+        .bismillah-box::before, .bismillah-box::after {
+            content: '☪';
+            position: absolute;
+            font-size: 3em;
+            opacity: 0.8;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .bismillah-box::before {
+            top: 18px;
+            left: 18px;
+        }
+        .bismillah-box::after {
+            bottom: 18px;
+            right: 18px;
+        }
 
-footer{
-text-align:center;
-font-size:0.8rem;
-padding:20px;
-color:#94a3b8;
-}
+        /* Navigation Links */
+        .nav-links {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background-color: #f57c00;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 15px rgba(245, 124, 0, 0.5);
+        }
+        .nav-btn:hover {
+            background-color: #e65100;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(245, 124, 0, 0.7);
+        }
 
-/* بسم الله */
-
-.bismillah-box{
-font-family:'Amiri',serif;
-font-size:2.2rem;
-text-align:center;
-background:linear-gradient(135deg,#ffffff,#f0fdf4);
-border:3px solid var(--main);
-border-radius:25px;
-padding:20px;
-margin-bottom:30px;
-color:var(--main);
-position:relative;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-animation:fadeIn 2s ease;
-}
-
-.bismillah-box::before,
-.bismillah-box::after{
-content:"☪";
-font-size:1.6rem;
-color:var(--accent);
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-}
-
-.bismillah-box::before{ right:15px; }
-.bismillah-box::after{ left:15px; }
-
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(-20px);}
-to{opacity:1; transform:translateY(0);}
-}
-
-</style>
+        /* Footer Styling */
+        footer {
+            margin-top: 60px;
+            padding: 25px;
+            font-size: 1em;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+        footer a {
+            color: #444;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+            color: #000;
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Top Bar for Date and Time - Adjusted -->
+    <div class="top-bar" id="top-bar">
+        <span id="current-date-time"></span>
+    </div>
 
-<div class="container">
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            سایت مذهبی G.H.E.M
+        </div>
 
-<div class="header">
-<h1>✨ مجموعه آیات و سوره ها ✨</h1>
-<p>سایت مذهبی G.H.E.M</p>
-</div>
+        <!-- Enhanced Bismillah Box -->
+        <div class="bismillah-box">
+            بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ
+        </div>
 
-<div class="bismillah-box">
-بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-</div>
+        <!-- Surah Al-Fatiha Card -->
+        <div class="card">
+            <h2>🌙 سوره حمد</h2>
+            <i class="icon moon-icon">🌙</i>
+            <div class="quran">
+                بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ <br>
+                الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ <br>
+                الرَّحْمَـٰنِ الرَّحِيمِ <br>
+                مَالِكِ يَوْمِ الدِّينِ <br>
+                إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ <br>
+                اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ <br>
+                صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ
+            </div>
+        </div>
 
-<!-- سوره حمد -->
-<div class="card">
-<h2>سوره مبارکه حمد</h2>
-<div class="quran">
-بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ ﴿۱﴾ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ﴿۲﴾ الرَّحْمَنِ الرَّحِيمِ ﴿۳﴾ مَالِكِ يَوْمِ الدِّينِ ﴿۴﴾ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ﴿۵﴾ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ﴿۶﴾ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ﴿۷﴾
-</div>
-</div>
+        <!-- Special Card for Wa In Ya Kaad -->
+        <div class="aya-card-special">
+            <h2>✨ وَإِنْ يَكَادُ</h2>
+            <i class="icon sparkle-icon">✨</i>
+            <div class="quran">
+                بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ <br>
+                وَإِن يَكَادُ الَّذِينَ كَفَرُوا لَيُزْلِقُونَكَ بِأَبْصَارِهِمْ لَمَّا سَمِعُوا الذِّكْرَ وَيَقُولُونَ إِنَّهُ لَمَجْنُونٌ <br>
+                وَمَا هُوَ إِلَّا ذِكْرٌ لِّلْعَالَمِينَ
+            </div>
+        </div>
 
-<!-- آیت الکرسی -->
-<div class="card">
-<h2>آیت الکرسی</h2>
-<div class="quran">
-اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ
-</div>
-</div>
+        <!-- Surah Al-Ikhlas Card -->
+        <div class="aya-card">
+            <h2>🌙 سوره اخلاص</h2>
+            <i class="icon moon-icon">🌙</i>
+            <div class="quran">
+                بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ <br>
+                قُلْ هُوَ اللَّهُ أَحَدٌ <br>
+                اللَّهُ الصَّمَدُ <br>
+                لَمْ يَلِدْ وَلَمْ يُولَدْ <br>
+                وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ
+            </div>
+        </div>
 
-<!-- وان یکاد -->
-<div class="card">
-<h2>آیه وَإِن يَكَادُ</h2>
-<div class="quran">
-وَإِنْ يَكَادُ الَّذِينَ كَفَرُوا لَيُزْلِقُونَكَ بِأَبْصَارِهِمْ لَمَّا سَمِعُوا الذِّكْرَ وَيَقُولُونَ إِنَّهُ لَمَجْنُونٌ ﴿۵۱﴾ وَمَا هُوَ إِلَّا ذِكْرٌ لِلْعَالَمِينَ ﴿۵۲﴾
-</div>
-</div>
+        <!-- Surah Al-Falaq Card -->
+        <div class="aya-card">
+            <h2>✨ سوره فلق</h2>
+            <i class="icon moon-icon">🌙</i>
+            <div class="quran">
+                بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ <br>
+                قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ <br>
+                مِن شَرِّ مَا خَلَقَ <br>
+                وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ <br>
+                وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ <br>
+                وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ
+            </div>
+        </div>
 
-<a href="azkar.html" class="nav-btn">📿 ذکر ایام هفته و صلوات کبیره</a>
-<a href="zekrshomar.html" class="nav-btn" style="background:var(--accent);">🔢 استفاده از ذکرشمار</a>
+        <!-- Surah An-Nas Card -->
+         <div class="aya-card">
+            <h2>🌙 سوره ناس</h2>
+            <i class="icon moon-icon">🌙</i>
+            <div class="quran">
+                بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ <br>
+                قُلْ أَعُوذُ بِرَبِّ النَّاسِ <br>
+                مَلِكِ النَّاسِ <br>
+                إِلَـٰهِ النَّاسِ <br>
+                مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ <br>
+                الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ <br>
+                مِنَ الْجِنَّةِ وَالنَّاسِ
+            </div>
+        </div>
 
-<footer>سایت ساخته شده توسط: Mohammad Mehdi Abdollahzadeh</footer>
+        <!-- Dua Al-Faraj Card -->
+        <div class="faraj-card">
+            <h2>🕊️ دعای فرج</h2>
+            <i class="icon dove-icon">🕊️</i>
+            <p>
+                اللّهُمَّ كُنْ لِوَلِيِّكَ الحُجَّةِ بنِ الحَسَن <br>
+                صَلَواتُكَ عَلَيهِ و عَلى آبائِهِ <br>
+                في هذهِ السّاعَةِ وَ في كُلِّ ساعَةٍ <br>
+                وَلِيّاً وَ حافِظاً وَ قائِداً وَ ناصِراً <br>
+                وَدَليلاً وَ عَوناً حَتّى تُسكِنَهُ أَرضَكَ <br>
+                بِها وَ تُمَتِّعَهُ فيها طَويلاً
+            </p>
+        </div>
 
-</div>
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="azkar.html" class="nav-btn">اذکار روزانه</a>
+            <a href="zekrshomar.html" class="nav-btn">ذکر شمار</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        ساخته شده توسط <a href="https://github.com/MohammadMehdi-A" target="_blank">Mohammad Mehdi Abdollahzadeh</a>
+    </footer>
+
+    <!-- Script for Date and Time -->
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+
+            // Using Persian locale for Gregorian date formatting as a placeholder
+            const gregorianDate = now.toLocaleDateString('fa-IR');
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+
+            // Placeholder for Persian Date - requires a dedicated library for accuracy
+            const dateTimeString = `${gregorianDate} - ${hours}:${minutes}:${seconds}`;
+
+            document.getElementById('current-date-time').innerText = `امروز: ${dateTimeString}`;
+        }
+
+        // Update date and time every second
+        setInterval(updateDateTime, 1000);
+
+        // Initial call to display date and time immediately
+        updateDateTime();
+    </script>
 </body>
 </html>
+
