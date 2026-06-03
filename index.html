@@ -1,76 +1,169 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G.H.E.M | قرآن کریم</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Vazirmatn:wght@400;700&display=swap');
-        :root { --main: #065f46; --accent: #ea580c; --bg: #f8fafc; }
-        body { font-family: 'Vazirmatn', sans-serif; background: var(--bg); color: #1e293b; margin: 0; padding: 20px; line-height: 2; }
-        .container { max-width: 700px; margin: 0 auto; }
-        .header { background: var(--main); color: white; padding: 30px; border-radius: 25px; margin-bottom: 30px; text-align: center; box-shadow: 0 10px 20px rgba(6, 95, 70, 0.2); }
-        .card { background: white; padding: 25px; border-radius: 20px; margin-bottom: 25px; border-right: 8px solid var(--accent); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        h2 { color: var(--main); font-size: 1.4rem; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 0; }
-        .quran { font-family: 'Amiri', serif; font-size: 1.4rem; text-align: center; color: #334155; line-height: 2.5; }
-        .translation { font-size: 0.9rem; color: #64748b; margin-top: 10px; text-align: justify; }
-        .nav-btn { display: block; background: var(--main); color: white; text-align: center; padding: 18px; text-decoration: none; border-radius: 15px; font-weight: bold; margin-bottom: 15px; transition: 0.3s; }
-        .nav-btn:hover { background: #044e3a; transform: scale(1.02); }
-        footer { text-align: center; font-size: 0.8rem; padding: 20px; color: #94a3b8; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G.H.E.M | قرآن کریم</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Vazirmatn:wght@400;700&display=swap');
+
+:root { --main:#065f46; --accent:#ea580c; --bg:#f8fafc; }
+
+body{
+font-family:'Vazirmatn',sans-serif;
+background:var(--bg);
+color:#1e293b;
+margin:0;
+padding:20px;
+line-height:2;
+}
+
+.container{
+max-width:700px;
+margin:0 auto;
+}
+
+.header{
+background:var(--main);
+color:white;
+padding:30px;
+border-radius:25px;
+margin-bottom:20px;
+text-align:center;
+box-shadow:0 10px 20px rgba(6,95,70,0.2);
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+margin-bottom:25px;
+border-right:8px solid var(--accent);
+box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
+
+h2{
+color:var(--main);
+font-size:1.4rem;
+border-bottom:1px solid #eee;
+padding-bottom:10px;
+margin-top:0;
+}
+
+.quran{
+font-family:'Amiri',serif;
+font-size:1.4rem;
+text-align:center;
+color:#334155;
+line-height:2.5;
+}
+
+.nav-btn{
+display:block;
+background:var(--main);
+color:white;
+text-align:center;
+padding:18px;
+text-decoration:none;
+border-radius:15px;
+font-weight:bold;
+margin-bottom:15px;
+transition:0.3s;
+}
+
+.nav-btn:hover{
+background:#044e3a;
+transform:scale(1.02);
+}
+
+footer{
+text-align:center;
+font-size:0.8rem;
+padding:20px;
+color:#94a3b8;
+}
+
+/* بسم الله */
+
+.bismillah-box{
+font-family:'Amiri',serif;
+font-size:2.2rem;
+text-align:center;
+background:linear-gradient(135deg,#ffffff,#f0fdf4);
+border:3px solid var(--main);
+border-radius:25px;
+padding:20px;
+margin-bottom:30px;
+color:var(--main);
+position:relative;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+animation:fadeIn 2s ease;
+}
+
+.bismillah-box::before,
+.bismillah-box::after{
+content:"☪";
+font-size:1.6rem;
+color:var(--accent);
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+}
+
+.bismillah-box::before{ right:15px; }
+.bismillah-box::after{ left:15px; }
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(-20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>✨ مجموعه آیات و سوره ها ✨</h1>
-            <p>سایت مذهبی G.H.E.M</p>
-        </div>
 
-        <!-- سوره حمد -->
-        <div class="card">
-            <h2>سوره مبارکه حمد</h2>
-            <div class="quran">
-                بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ ﴿۱﴾ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ﴿۲﴾ الرَّحْمَنِ الرَّحِيمِ ﴿۳﴾ مَالِكِ يَوْمِ الدِّينِ ﴿۴﴾ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ﴿۵﴾ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ﴿۶﴾ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ﴿۷﴾
-            </div>
-        </div>
+<div class="container">
 
-        <!-- آیت الکرسی -->
-        <div class="card">
-            <h2>آیت الکرسی</h2>
-            <div class="quran">
-                اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ
-            </div>
-        </div>
+<div class="header">
+<h1>✨ مجموعه آیات و سوره ها ✨</h1>
+<p>سایت مذهبی G.H.E.M</p>
+</div>
 
-        <!-- وان یکاد -->
-        <div class="card">
-            <h2>آیه وَإِن يَكَادُ</h2>
-            <div class="quran">
-                وَإِنْ يَكَادُ الَّذِينَ كَفَرُوا لَيُزْلِقُونَكَ بِأَبْصَارِهِمْ لَمَّا سَمِعُوا الذِّكْرَ وَيَقُولُونَ إِنَّهُ لَمَجْنُونٌ ﴿۵۱﴾ وَمَا هُوَ إِلَّا ذِكْرٌ لِلْعَالَمِينَ ﴿۵۲﴾
-            </div>
-        </div>
+<div class="bismillah-box">
+بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+</div>
 
-        <!-- چهار قل -->
-        <div class="card">
-            <h2>سوره های چهارقل (کامل)</h2>
-            <div class="quran" style="font-size: 1.1rem; text-align: right;">
-                <b>اخلاص:</b> قُلْ هُوَ اللَّهُ أَحَدٌ ﴿۱﴾ اللَّهُ الصَّمَدُ ﴿۲﴾ لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿۳﴾ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ ﴿۴﴾<br><br>
-                <b>فلق:</b> قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ﴿۱﴾ مِنْ شَرِّ مَا خَلَقَ ﴿۲﴾ وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿۳﴾ وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ﴿۴﴾ وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿۵﴾<br><br>
-                <b>ناس:</b> قُلْ أَعُوذُ بِرَبِّ النَّاسِ ﴿۱﴾ مَلِكِ النَّاسِ ﴿۲﴾ إِلَهِ النَّاسِ ﴿۳﴾ مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ﴿۴﴾ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ﴿۵﴾ مِنَ الْجِنَّةِ وَالنَّاسِ ﴿۶﴾<br><br>
-                <b>کافرون:</b> قُلْ يَا أَيُّهَا الْكَافِرُونَ ﴿۱﴾ لَا أَعْبُدُ مَا تَعْبُدُونَ ﴿۲﴾ وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ ﴿۳﴾ وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ ﴿۴﴾ وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ ﴿۵﴾ لَكُمْ دِينُكُمْ وَلِيَ دِينِ ﴿۶﴾
-            </div>
-        </div>
+<!-- سوره حمد -->
+<div class="card">
+<h2>سوره مبارکه حمد</h2>
+<div class="quran">
+بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ ﴿۱﴾ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ﴿۲﴾ الرَّحْمَنِ الرَّحِيمِ ﴿۳﴾ مَالِكِ يَوْمِ الدِّينِ ﴿۴﴾ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ﴿۵﴾ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ﴿۶﴾ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ﴿۷﴾
+</div>
+</div>
 
-        <a href="azkar.html" class="nav-btn">📿 ذکر ایام هفته و صلوات کبیره</a>
-        <a href="zekrshomar.html" class="nav-btn" style="background: var(--accent);">🔢 استفاده از ذکرشمار</a>
-<section class="card">
-  <h2>دعای فرج</h2>
-  <p>اللّهُمَّ كُنْ لِوَلِيِّكَ الْحُجَّةِ بْنِ الْحَسَنِ...</p>
-  <a href="faraj.html">مشاهده کامل دعای فرج</a>
-</section>
-<a href="end.html"># end</a>
+<!-- آیت الکرسی -->
+<div class="card">
+<h2>آیت الکرسی</h2>
+<div class="quran">
+اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ
+</div>
+</div>
 
-        <footer>سایت ساخته شده توسط: Mohammad Mehdi Abdollahzadeh</footer>
-    </div>
+<!-- وان یکاد -->
+<div class="card">
+<h2>آیه وَإِن يَكَادُ</h2>
+<div class="quran">
+وَإِنْ يَكَادُ الَّذِينَ كَفَرُوا لَيُزْلِقُونَكَ بِأَبْصَارِهِمْ لَمَّا سَمِعُوا الذِّكْرَ وَيَقُولُونَ إِنَّهُ لَمَجْنُونٌ ﴿۵۱﴾ وَمَا هُوَ إِلَّا ذِكْرٌ لِلْعَالَمِينَ ﴿۵۲﴾
+</div>
+</div>
+
+<a href="azkar.html" class="nav-btn">📿 ذکر ایام هفته و صلوات کبیره</a>
+<a href="zekrshomar.html" class="nav-btn" style="background:var(--accent);">🔢 استفاده از ذکرشمار</a>
+
+<footer>سایت ساخته شده توسط: Mohammad Mehdi Abdollahzadeh</footer>
+
+</div>
 </body>
 </html>
