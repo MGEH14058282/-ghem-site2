@@ -1,415 +1,439 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G.H.E.M | سایت مذهبی: قرآن، اخلاص، کافرون، فلق، ناس، آیت الکرسی</title>
-    <meta name="description" content="به سایت مذهبی G.H.E.M خوش آمدید! دسترسی آسان به قرآن کریم، قرائت و متن سوره‌های اخلاص، کافرون، فلق، ناس، و فضیلت‌های آیت الکرسی. مرجعی برای علاقه‌مندان به معارف اسلامی.">
-    <meta name="keywords" content="GHEM, سایت مذهبی, قرآن, اخلاص, کافرون, فلق, ناس, آیت الکرسی, ادعیه, مطالب اسلامی">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Vazirmatn:wght@100..900&family=Lalezar&display=swap" rel="stylesheet">
-    <style>
-        /* Animations and General Styles */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes zoomInFloat {
-            0% { opacity: 0; transform: scale(0.7) translateY(20px); }
-            50% { opacity: 1; transform: scale(1.1) translateY(-10px); }
-            100% { opacity: 1; transform: scale(1) translateY(0); }
-        }
-        @keyframes floatMoon {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-        @keyframes sparkle {
-            0% { opacity: 0; transform: scale(0.5); }
-            50% { opacity: 1; transform: scale(1.2); }
-            100% { opacity: 0; transform: scale(0.5); }
-        }
-        @keyframes floatDove {
-            0% { transform: translateY(0px) rotate(-10deg); }
-            50% { transform: translateY(-15px) rotate(10deg); }
-            100% { transform: translateY(0px) rotate(-10deg); }
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(76, 175, 80, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-            100% { transform: translateY(0px); }
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: 'Amiri', serif; /* Main font for Quranic text */
-            background: linear-gradient(135deg, #e0f2fe, #ffffff);
-            color: #333;
-            margin: 0;
-            padding: 0;
-            direction: rtl;
-            text-align: center;
-            overflow-x: hidden;
-        }
+<title>G.H.E.M | سایت مذهبی</title>
 
-        .top-bar {
-            padding: 8px 15px;
-            font-size: 0.9em;
-            border-bottom: 2px solid #dda0dd;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-            animation: fadeInDown 1s ease-out forwards;
-            height: 50px; /* Fixed height for better control */
-            align-items: center; /* Center content vertically */
-            transition: background-color 1s ease; /* Smooth transition for color change */
-        }
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Vazirmatn&family=Lalezar&display=swap" rel="stylesheet">
 
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 30px;
-            background-color: rgba(255, 255, 255, 0.85);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-        }
+<style>
 
-        .header-container {
-            display: inline-block; /* Allow padding and margin to work correctly */
-            padding: 15px 35px;
-            border-radius: 15px;
-            background: linear-gradient(135deg, #3f51b5, #5c6bc0); /* Deep blue gradient */
-            color: white;
-            font-size: 2.8em;
-            font-family: 'Amiri', serif;
-            animation: fadeInDown 1.5s ease-out forwards;
-            margin-bottom: 35px;
-            box-shadow: 0 7px 20px rgba(0, 0, 150, 0.4);
-            border: 3px solid #303f9f; /* Darker blue border */
-        }
+body{
+margin:0;
+font-family:'Amiri',serif;
+text-align:center;
+overflow-x:hidden;
+transition:background 2s;
+}
 
-        .card, .aya-card, .aya-card-special, .faraj-card, .surah-card-one-color {
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-left: 7px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-        .card:hover, .aya-card:hover, .aya-card-special:hover, .faraj-card:hover, .surah-card-one-color:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
-        }
+/* top bar */
 
-        /* Single color card style for the requested Surahs */
-        .surah-card-one-color {
-            background-color: #e0f7fa; /* Light Cyan */
-            border-left-color: #00acc1; /* Cyan */
-        }
-        .surah-card-one-color h2 { color: #00838f; }
-        .surah-card-one-color .icon { position: absolute; top: 15px; left: 15px; font-size: 2.5em; opacity: 0.7; color: #4dd0e1; }
-        .surah-card-one-color .moon-icon { animation: floatMoon 3s ease-in-out infinite; }
+.top-bar{
+padding:12px;
+font-family:'Vazirmatn';
+color:white;
+font-size:18px;
+transition:background 1.5s;
+}
 
+/* sky */
 
-        .aya-card { /* Style for Al-Fatiha */
-            background-color: #e3f2fd;
-            border-left-color: #64b5f6;
-        }
-        .aya-card h2 { color: #1976d2; }
-        .aya-card .icon { position: absolute; top: 15px; left: 15px; font-size: 2.5em; opacity: 0.7; color: #90caf9; }
-        .aya-card .moon-icon { animation: floatMoon 3s ease-in-out infinite; }
+#sky{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+overflow:hidden;
+}
 
-        .aya-card-special { /* Style for Wa In Ya Kaad */
-            background-color: #fff9c4;
-            border-left-color: #fbc02d;
-        }
-        .aya-card-special h2 { color: #f57f17; }
-        .aya-card-special .icon { position: absolute; top: 15px; left: 15px; font-size: 2.5em; opacity: 0.7; color: #ffeb3b; }
-        .aya-card-special .sparkle-icon { animation: sparkle 2s ease-in-out infinite; }
+.day{
+background:linear-gradient(#87ceeb,#e3f2fd);
+}
 
-        .faraj-card { /* Style for Dua Al-Faraj */
-            background: linear-gradient(135deg, #ffffff, #e0f2fe);
-            border-left-color: #4caf50;
-        }
-        .faraj-card h2 { color: #2e7d32; font-size: 2.6em; }
-        .faraj-card .icon { position: absolute; top: 15px; left: 15px; font-size: 2.5em; opacity: 0.7; color: #81c784; }
-        .faraj-card .dove-icon { animation: floatDove 3s ease-in-out infinite; }
+.night{
+background:#0b1d3a;
+}
 
-        h2 {
-            font-family: 'Amiri', serif;
-            font-size: 2.2em;
-            margin-bottom: 25px;
-            padding-bottom: 12px;
-            border-bottom: 3px solid #e0e0e0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .quran, .faraj-text {
-            font-family: 'Amiri', serif; /* Use Amiri for Quran text */
-            font-size: 1.7em; /* Slightly smaller for better fit */
-            line-height: 2.9; /* Increased line height for better readability, adjust as needed */
-            color: #3a3a3a; /* Darker gray for text */
-            margin-top: 15px;
-            text-align: justify; /* Justify text for a more formal look */
-        }
+/* sun moon */
 
-        /* Enhanced Bismillah Box */
-        .bismillah-box {
-            display: inline-block;
-            padding: 35px 50px; /* Generous padding */
-            background: linear-gradient(135deg, #ff8f00, #ffa000); /* Amber gradient */
-            color: white;
-            border-radius: 20px; /* More rounded corners */
-            margin: 40px auto;
-            position: relative;
-            box-shadow: 0 15px 35px rgba(255, 152, 0, 0.6); /* Stronger shadow */
-            font-size: 3.5em; /* Larger font size */
-            font-family: 'Amiri', serif;
-            letter-spacing: 8px; /* Wider letter spacing */
-            text-shadow: 4px 4px 10px rgba(0,0,0,0.5);
-            border: 5px solid #f57c00; /* Darker amber border */
-            animation: pulse 2s infinite ease-in-out, zoomInFloat 1.5s ease-out forwards;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .bismillah-box:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 20px 45px rgba(255, 152, 0, 0.8);
-        }
-        .bismillah-box::before, .bismillah-box::after {
-            content: '✨'; /* Using sparkle emoji */
-            position: absolute;
-            font-size: 2.5em; /* Smaller decorative icons */
-            opacity: 0.8;
-            color: rgba(255, 255, 255, 0.9);
-        }
-        .bismillah-box::before { top: 20px; left: 20px; animation: sparkle 2s infinite ease-in-out; }
-        .bismillah-box::after { bottom: 20px; right: 20px; animation: sparkle 2.5s infinite ease-in-out; }
+#sun,#moon{
+position:absolute;
+font-size:70px;
+top:80px;
+right:80px;
+}
 
+#sun{
+animation:sunMove 60s linear infinite;
+}
 
-        /* Navigation Links */
-        .nav-links { margin-top: 40px; display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; }
-        .nav-btn { background-color: #1976d2; color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 6px 15px rgba(25, 118, 210, 0.5); }
-        .nav-btn:hover { background-color: #1565c0; transform: translateY(-4px); box-shadow: 0 10px 20px rgba(25, 118, 210, 0.7); }
+#moon{
+animation:moonMove 80s linear infinite;
+display:none;
+}
 
-        /* Footer Styling - Enhanced */
-        footer {
-            margin-top: 60px;
-            padding: 30px 20px; /* More padding */
-            font-size: 1.3em; /* Slightly larger font */
-            color: #263238; /* Darker text color */
-            border-top: 1px solid #b0bec5; /* Softer border */
-            font-family: 'Lalezar', cursive; /* Using Lalezar for the author's name */
-            font-weight: normal; /* Lalezar is typically bold by default */
-            background-color: rgba(255, 255, 255, 0.8); /* Slightly more opaque background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.08); /* Subtle top shadow */
-        }
-        footer a {
-            color: #007bff; /* Standard link color, can be changed if needed */
-            font-weight: normal; /* Match footer font */
-            text-decoration: none;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
-        }
-        footer a:hover {
-            color: #0056b3;
-            text-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Glow effect on hover */
-        }
-        .footer-creator {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px; /* Adjusted gap */
-            animation: float 2s ease-in-out infinite; /* Applied float animation to the whole footer */
-        }
-        .footer-creator .icon {
-            font-size: 1.8em;
-            opacity: 0.8;
-        }
-        .footer-creator .icon:nth-child(1) { animation-delay: 0s; color: #FFD700; } /* Gold star */
-        .footer-creator .icon:nth-child(3) { animation-delay: 0.5s; color: #FF69B4; } /* Hot Pink */
+@keyframes sunMove{
+0%{transform:translateX(0)}
+50%{transform:translateX(-400px) translateY(80px)}
+100%{transform:translateX(-800px)}
+}
 
-    </style>
+@keyframes moonMove{
+0%{transform:translateX(0)}
+50%{transform:translateX(-400px) translateY(-40px)}
+100%{transform:translateX(-800px)}
+}
+
+/* stars */
+
+.star{
+position:absolute;
+width:3px;
+height:3px;
+background:white;
+border-radius:50%;
+animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+from{opacity:.2}
+to{opacity:1}
+}
+
+/* clouds */
+
+.cloud{
+position:absolute;
+font-size:55px;
+animation:cloudMove linear infinite;
+}
+
+@keyframes cloudMove{
+from{transform:translateX(-200px)}
+to{transform:translateX(110vw)}
+}
+
+/* container */
+
+.container{
+max-width:900px;
+margin:40px auto;
+padding:30px;
+background:rgba(255,255,255,.95);
+border-radius:15px;
+box-shadow:0 10px 40px rgba(0,0,0,.3);
+}
+
+.header-container{
+background:linear-gradient(135deg,#3949ab,#5c6bc0);
+color:white;
+padding:20px;
+font-size:2.5em;
+border-radius:15px;
+margin-bottom:30px;
+}
+
+/* bismillah */
+
+.bismillah-box{
+background:linear-gradient(135deg,#ff9800,#ffc107);
+color:white;
+font-size:2.8em;
+padding:30px;
+border-radius:20px;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.05)}
+100%{transform:scale(1)}
+}
+
+/* cards */
+
+.card{
+padding:30px;
+margin-top:30px;
+border-radius:12px;
+transition:.4s;
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.surah-card{
+background:#e3f2fd;
+border-left:7px solid #1e88e5;
+}
+
+.faraj-card{
+background:#e8f5e9;
+border-left:7px solid #43a047;
+}
+
+.quran{
+font-size:1.7em;
+line-height:2.9;
+}
+
+/* countdown */
+
+.countdown-card{
+background:#f1f8e9;
+border-left:7px solid #66bb6a;
+padding:25px;
+border-radius:12px;
+margin-top:30px;
+}
+
+.countdown{
+font-size:2em;
+font-family:'Vazirmatn';
+color:#1b5e20;
+}
+
+/* buttons */
+
+.nav-links{
+margin-top:40px;
+}
+
+.nav-btn{
+background:#1976d2;
+color:white;
+padding:14px 30px;
+margin:10px;
+display:inline-block;
+border-radius:8px;
+text-decoration:none;
+}
+
+/* footer */
+
+footer{
+margin-top:60px;
+padding:25px;
+background:white;
+text-align:center;
+font-family:'Lalezar';
+}
+
+</style>
 </head>
+
 <body>
-    <!-- Top Bar with Dynamic Colors -->
-    <div class="top-bar" id="top-bar">
-        <span id="current-date-time"></span>
-    </div>
 
-    <div class="container">
-        <!-- Header -->
-        <div class="header-container">
-            سایت مذهبی G.H.E.M
-        </div>
-
-        <!-- Bismillah -->
-        <div class="bismillah-box">
-            بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ
-        </div>
-
-        <!-- Surah Al-Fatiha Card -->
-        <div class="aya-card">
-            <h2>🌙 سوره حمد</h2>
-            <i class="icon moon-icon">🌙</i>
-            <div class="quran">
-                الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ<br>
-                الرَّحْمَـٰنِ الرَّحِيمِ<br>
-                مَالِكِ يَوْمِ الدِّينِ<br>
-                إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ<br>
-                اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ<br>
-                صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ
-            </div>
-        </div>
-
-        <!-- Wa In Ya Kaad Card -->
-        <div class="aya-card-special">
-            <h2>✨ وَإِنْ يَكَادُ</h2>
-            <i class="icon sparkle-icon">✨</i>
-            <div class="quran">
-                وَإِن يَكَادُ الَّذِينَ كَفَرُوا لَيُزْلِقُونَكَ بِأَبْصَارِهِمْ لَمَّا سَمِعُوا الذِّكْرَ وَيَقُولُونَ إِنَّهُ لَمَجْنُونٌ<br>
-                وَمَا هُوَ إِلَّا ذِكْرٌ لِّلْعَالَمِينَ
-            </div>
-        </div>
-
-        <!-- Surahs with Single Color Background (Corrected Order) -->
-        <div class="surah-card-one-color">
-            <h2>🌙 سوره اخلاص</h2>
-            <i class="icon moon-icon">🌙</i>
-            <div class="quran">
-                قُلْ هُوَ اللَّهُ أَحَدٌ<br>
-                اللَّهُ الصَّمَدُ<br>
-                لَمْ يَلِدْ وَلَمْ يُولَدْ<br>
-                وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ
-            </div>
-        </div>
-<div class="surah-card-one-color">
-    <h2>⭐ سوره کافرون</h2>
-    <i class="icon moon-icon">🌙</i>
-    <div class="quran">
-        قُلْ يَا أَيُّهَا الْكَافِرُونَ<br>
-        لَا أَعْبُدُ مَا تَعْبُدُونَ<br>
-        وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ<br>
-        وَلَا أَنَا عَابِدٌ مَّا عَبَدتُّمْ<br>
-        وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ<br>
-        لَكُمْ دِينُكُمْ وَلِيَ دِينِ
-    </div>
+<div class="top-bar">
+<span id="datetime"></span>
 </div>
 
-        <div class="surah-card-one-color">
-            <h2>✨ سوره فلق</h2>
-            <i class="icon moon-icon">🌙</i>
-            <div class="quran">
-                قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ<br>
-                مِن شَرِّ مَا خَلَقَ<br>
-                وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ<br>
-                وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ<br>
-                وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ
-            </div>
-        </div>
-
-        <div class="surah-card-one-color">
-            <h2>🌙 سوره ناس</h2>
-            <i class="icon moon-icon">🌙</i>
-            <div class="quran">
-                قُلْ أَعُوذُ بِرَبِّ النَّاسِ<br>
-                مَلِكِ النَّاسِ<br>
-                إِلَـٰهِ النَّاسِ<br>
-                مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ<br>
-                الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ<br>
-                مِنَ الْجِنَّةِ وَالنَّاسِ
-            </div>
-        </div>
-       
-<div class="faraj-card">
-    <h2>🕊️ دعای فرج</h2>
-    <i class="icon dove-icon">🕊️</i>
-    <p class="faraj-text">
-        اللّهُمَّ كُنْ لِوَلِيِّكَ الحُجَّةِ بنِ الحَسَنِ<br>
-        صَلَواتُكَ عَلَيهِ وَ عَلى آبائِهِ<br>
-        في هذِهِ السّاعَةِ وَ في كُلِّ ساعَةٍ<br>
-        وَلِيّاً وَ حافِظاً وَ قائِداً وَ ناصِراً وَ دَليلاً وَ عَيناً<br>
-        حَتّى تُسكِنَهُ أَرضَكَ طَوعاً<br>
-        وَ تُمَتِّعَهُ فيها طَويلاً<br>
-        بِرَحْمَتِكَ يَا أَرْحَمَ الرَّاحِمِينَ
-    </p>
+<div id="sky">
+<div id="sun">☀️</div>
+<div id="moon">🌙</div>
+<div id="clouds"></div>
+<div id="stars"></div>
 </div>
 
-        <!-- Navigation Links -->
-        <div class="nav-links">
-            <a href="azkar.html" class="nav-btn">اذکار روزانه</a>
-            <a href="zekrshomar.html" class="nav-btn">ذکر شمار</a>
-        </div>
-    </div>
+<div class="container">
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-creator">
-            <span class="icon">✨</span>
-            ساخته شده توسط <a href="https://github.com/MohammadMehdi-A" target="_blank">Mohammad Mehdi Abdollahzadeh</a>
-            <span class="icon">⭐</span>
-        </div>
-    </footer>
+<div class="header-container">
+سایت مذهبی G.H.E.M
+</div>
 
-    <!-- Script for Date and Time -->
-    <script>
-        const topBar = document.getElementById('top-bar');
-        const dateTimeSpan = document.getElementById('current-date-time');
+<div class="bismillah-box">
+بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ
+</div>
 
-        // Define a palette of colors for the top bar
-        const colorPalette = [
-            '#f8bbd0', // Pink
-            '#e1bee7', // Purple
-            '#d1c4e9', // Deep Purple
-            '#c5cae9', // Indigo
-            '#bbdefb', // Light Blue
-            '#b3e5fc', // Cyan
-            '#b2ebf2', // Teal
-            '#a7ffeb', // Light Green
-            '#c8e6c9', // Green
-            '#dcedc8', // Lime
-            '#f0f4c3', // Yellow
-            '#fff9c4', // Light Yellow
-            '#ffe0b2', // Orange
-            '#ffccbc', // Deep Orange
-            '#fce4ec'  // Pink again for loop
-        ];
+<div class="card surah-card">
+<h2>🌙 سوره حمد</h2>
+<div class="quran">
+الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ<br>
+الرَّحْمَـٰنِ الرَّحِيمِ<br>
+مَالِكِ يَوْمِ الدِّينِ<br>
+إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ<br>
+اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ<br>
+صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ
+</div>
+</div>
 
-        function getHourColor(hour) {
-            // Use the hour to pick an index in the palette
-            return colorPalette[hour % colorPalette.length];
-        }
+<div class="card surah-card">
+<h2>🌙 سوره اخلاص</h2>
+<div class="quran">
+قُلْ هُوَ اللَّهُ أَحَدٌ<br>
+اللَّهُ الصَّمَدُ<br>
+لَمْ يَلِدْ وَلَمْ يُولَدْ<br>
+وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ
+</div>
+</div>
 
-        function updateDateTime() {
-            const now = new Date();
-            const gregorianDate = now.toLocaleDateString('fa-IR');
-            const hours = now.getHours();
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
+<div class="card surah-card">
+<h2>⭐ سوره کافرون</h2>
+<div class="quran">
+قُلْ يَا أَيُّهَا الْكَافِرُونَ<br>
+لَا أَعْبُدُ مَا تَعْبُدُونَ<br>
+وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ<br>
+وَلَا أَنَا عَابِدٌ مَّا عَبَدتُّمْ<br>
+وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ<br>
+لَكُمْ دِينُكُمْ وَلِيَ دِينِ
+</div>
+</div>
 
-            const dateTimeString = `${gregorianDate} - ${hours}:${minutes}:${seconds}`;
-            dateTimeSpan.innerText = `امروز: ${dateTimeString}`;
+<div class="card surah-card">
+<h2>✨ سوره فلق</h2>
+<div class="quran">
+قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ<br>
+مِن شَرِّ مَا خَلَقَ<br>
+وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ<br>
+وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ<br>
+وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ
+</div>
+</div>
 
-            // Update the top bar background color based on the current hour
-            topBar.style.backgroundColor = getHourColor(hours);
-        }
+<div class="card surah-card">
+<h2>🌙 سوره ناس</h2>
+<div class="quran">
+قُلْ أَعُوذُ بِرَبِّ النَّاسِ<br>
+مَلِكِ النَّاسِ<br>
+إِلَـٰهِ النَّاسِ<br>
+مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ<br>
+الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ<br>
+مِنَ الْجِنَّةِ وَالنَّاسِ
+</div>
+</div>
 
-        // Initial call to set date/time and color
-        updateDateTime();
+<div class="card faraj-card">
+<h2>🕊️ دعای فرج</h2>
+<div class="quran">
+اللّهُمَّ كُنْ لِوَلِيِّكَ الحُجَّةِ بنِ الحَسَنِ<br>
+صَلَواتُكَ عَلَيهِ وَ عَلى آبائِهِ<br>
+في هذِهِ السّاعَةِ وَ في كُلِّ ساعَةٍ<br>
+وَلِيّاً وَ حافِظاً وَ قائِداً وَ ناصِراً وَ دَليلاً وَ عَيناً<br>
+حَتّى تُسكِنَهُ أَرضَكَ طَوعاً<br>
+وَ تُمَتِّعَهُ فيها طَويلاً<br>
+بِرَحْمَتِكَ يَا أَرْحَمَ الرَّاحِمِينَ
+</div>
+</div>
 
-        // Update every second to keep time and color current
-        setInterval(updateDateTime, 1000);
-    </script>
+<div class="countdown-card">
+<h2>⏳تا تحویل سال جدید</h2>
+<div id="countdown" class="countdown"></div>
+</div>
+
+<div class="nav-links">
+<a href="azkar.html" class="nav-btn">اذکار روزانه</a>
+<a href="zekrshomar.html" class="nav-btn">ذکر شمار</a>
+</div>
+
+</div>
+
+<footer>
+✨ ساخته شده توسط Mohammad Mehdi Abdollahzadeh ⭐
+</footer>
+
+<script>
+
+/* day night */
+
+const hour=new Date().getHours();
+const stars=document.getElementById("stars");
+const clouds=document.getElementById("clouds");
+const sun=document.getElementById("sun");
+const moon=document.getElementById("moon");
+
+if(hour>=6 && hour<18){
+
+document.body.classList.add("day");
+
+for(let i=0;i<8;i++){
+let c=document.createElement("div");
+c.className="cloud";
+c.innerHTML="☁️";
+c.style.top=Math.random()*60+"%";
+c.style.animationDuration=(20+Math.random()*20)+"s";
+clouds.appendChild(c);
+}
+
+}else{
+
+document.body.classList.add("night");
+sun.style.display="none";
+moon.style.display="block";
+
+for(let i=0;i<120;i++){
+let s=document.createElement("div");
+s.className="star";
+s.style.top=Math.random()*100+"%";
+s.style.left=Math.random()*100+"%";
+stars.appendChild(s);
+}
+
+}
+
+/* countdown */
+
+const newYear=new Date("March 20, 2027 12:30:00").getTime();
+const countdown=document.getElementById("countdown");
+
+function updateCountdown(){
+
+const now=new Date().getTime();
+const distance=newYear-now;
+
+if(distance<0){
+countdown.innerHTML="🎉 سال نو مبارک 🎉";
+return;
+}
+
+const days=Math.floor(distance/(1000*60*60*24));
+const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+const seconds=Math.floor((distance%(1000*60))/1000);
+
+countdown.innerHTML=
+days+" روز "+
+hours+" ساعت "+
+minutes+" دقیقه "+
+seconds+" ثانیه";
+
+}
+
+setInterval(updateCountdown,1000);
+
+/* date time */
+
+const bar=document.querySelector(".top-bar");
+
+const colors=[
+"#0f766e",
+"#1e88e5",
+"#c084fc",
+"#7b1fa2",
+"#fb8c00"
+];
+
+let colorIndex=0;
+
+function updateDateTime(){
+
+const now=new Date();
+
+const date=now.toLocaleDateString("fa-IR");
+const time=now.toLocaleTimeString("fa-IR");
+
+document.getElementById("datetime").innerText=date+" | "+time;
+
+}
+
+function changeColor(){
+
+bar.style.background=colors[colorIndex];
+
+colorIndex++;
+if(colorIndex>=colors.length) colorIndex=0;
+
+}
+
+setInterval(updateDateTime,1000);
+setInterval(changeColor,7000);
+
+</script>
+
 </body>
 </html>
